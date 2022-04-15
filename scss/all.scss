@@ -1,0 +1,299 @@
+@import "reset";
+@import "font";
+
+.wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 1024px;
+  color: #4a4a4a;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .subtitle {
+    margin: 10px 0;
+  }
+
+  .block {
+    padding: 48px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-around;
+    li {
+      width: 284px;
+      //   border: 1px solid;
+      background: #ffffff;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .info {
+    padding-top: 125px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: start;
+    background-image: url(../course-css-resume-main/assets/img-headerShape.png);
+    background-repeat: no-repeat;
+    .info-profile {
+      h1 {
+        margin: 10px 0;
+      }
+      p {
+        line-height: 24px;
+      }
+      margin-left: 135px;
+      margin-right: 135px;
+      text-align: center;
+    }
+    .info-list {
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        color: white;
+        img {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  .skill {
+    .skill-list {
+      .list-block {
+        img {
+          padding: 25px 0;
+        }
+        h3 {
+          text-align: center;
+        }
+        .list-block-disc {
+          line-height: 14px;
+          width: 220px;
+          margin: 26px auto;
+          font-size: 10px;
+          list-style-type: disc;
+          border: none;
+          list-style-position: inside;
+          li {
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+      .list-block:first-child {
+        border-bottom: 6px solid #f58d23;
+      }
+      .list-block:nth-child(2) {
+        border-bottom: 6px solid #539e43;
+      }
+      .list-block:last-child {
+        border-bottom: 6px solid #6762a6;
+      }
+    }
+  }
+  .experience {
+    position: relative;
+    .start {
+      margin: 0 auto;
+    }
+    .spot-a {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .spot-b {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .spot-c {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .experience-stick {
+      background: #d8d8d8;
+      width: 2px;
+      height: 514px;
+      margin: 0 auto;
+    }
+    .experience-end {
+      background: #d8d8d8;
+      width: 46px;
+      height: 4px;
+      margin: 0 auto;
+    }
+    .experience-info {
+      position: absolute;
+      padding: 12px;
+      border: 1px solid #fb56bf;
+      border-radius: 10px;
+      width: 260px;
+      height: 136px;
+      li {
+        font-size: 12px;
+      }
+
+      .phase {
+        font-size: 10px;
+      }
+    }
+    //:nth-child(n) 選擇器匹配屬於其父元素的第 N 個子元素
+    .experience-info:nth-child(9) {
+      top: 48%;
+      right: 50%;
+      transform: translate(-15%, 0%);
+      text-align: right;
+    }
+
+    .experience-info:nth-child(8) {
+      top: 28%;
+      left: 50%;
+      transform: translate(15%, 0%);
+    }
+
+    .experience-info:nth-child(10)  {
+      top: 68%;
+      left: 50%;
+      transform: translate(15%, 0%);
+    }
+  }
+  .work {
+    .work-list {
+      li:first-child .list-img-bg {
+        background: #f3acd9;
+      }
+      li:nth-child(2) .list-img-bg {
+        background: #424242;
+      }
+      li:last-child .list-img-bg {
+        background: #8ad7fa;
+      }
+      li:hover{
+        cursor: pointer;
+      }
+      li {
+        position: relative;
+        .list-img-bg {
+          height: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 6px 6px 0 0;
+          .dialog {
+            position: absolute;
+            top: 16%;
+            right: 0;
+          }
+        }
+        .word {
+          padding: 10px;
+          h3 {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    .about-main {
+      display: flex;
+      justify-content: center;
+      .autobiography {
+        width: 442px;
+        margin-left: 44px;
+      }
+    }
+  }
+
+  footer {
+    display: block;
+    background-image: url(../course-css-resume-main/assets/img-Looper-bg.png);
+    height: 87px;
+    padding: 33px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    .list {
+      flex-direction: column;
+      align-items: center;
+      li {
+        margin-bottom: 20px;
+      }
+    }
+    .info {
+      flex-direction: column;
+      .info-profile {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .info-list {
+        margin: 0 auto;
+        max-width: 500px;
+        li {
+          height: 50px;
+          background: #8ad7fa;
+          padding: 10px;
+          border-radius: 3px;
+        }
+      }
+    }
+    .experience {
+      .spot-a {
+        top: 25%;
+      }
+  
+      .spot-b {
+        top: 47%;
+      }
+  
+      .spot-c {
+        top: 69%;
+      }
+
+
+      .experience-info:nth-child(8) {
+        transform: translate(-50%, -16.5%);
+      }
+
+      .experience-info:nth-child(9) {
+        text-align: left;
+        transform: translate(50%, -5.5%);
+      }
+
+      .experience-info:nth-child(10) {
+        transform: translate(-50%, 5%);
+      }
+    }
+    .about {
+      .about-main {
+        flex-direction: column;
+        align-items: center;
+        img {
+          display: none;
+        }
+        .autobiography {
+          margin: 0;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
