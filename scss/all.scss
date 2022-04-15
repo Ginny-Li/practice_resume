@@ -76,13 +76,14 @@
         }
         .list-block-disc {
           line-height: 14px;
-          width: 220px;
           margin: 26px auto;
           font-size: 10px;
           list-style-type: disc;
           border: none;
           list-style-position: inside;
           li {
+            width: 220px;
+            margin:0 auto;
             border: none;
             box-shadow: none;
           }
